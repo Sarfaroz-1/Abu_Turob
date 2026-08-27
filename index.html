@@ -1,20 +1,187 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chemistry Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #0f4c81;
+            --bg-color: #f8f9fa;
+            --text-color: #212529;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: var(--primary-color);
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        nav li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Card Sections */
+        section {
+            background: var(--card-bg);
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            scroll-margin-top: 70px; /* Smooth scrolling offset */
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .header-title {
+            text-align: center;
+            padding: 40px 20px 10px;
+        }
+
+        /* Buttons & Badges */
+        .badge {
+            background: #e9ecef;
+            padding: 5px 12px;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 4px;
+            font-size: 0.9em;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+    </style>
 </head>
 <body>
-    <h1>Jane Doe - Chemistry Researcher</h1>
-    <p>Welcome to my personal site. Here you can find my CV, publications, and technical skills.</p>
-    
-    <h2>Skills & Techniques</h2>
-    <ul>
-        <li>NMR Spectroscopy & Mass Spectrometry</li>
-        <li>HPLC & Gas Chromatography</li>
-        <li>Wet Chemical Synthesis</li>
-    </ul>
 
-    <h2>Documents</h2>
-    <p><a href="CV.pdf">Download my CV (PDF)</a></p>
+    <!-- Header -->
+    <div class="header-title">
+        <h1>Your Name</h1>
+        <p>Chemistry Researcher & Analytical Specialist</p>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#equipment">Equipment</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#cv">CV</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Home Section -->
+        <section id="home">
+            <h2>Welcome</h2>
+            <p>Welcome to my professional portfolio. Here you can find details about my research background, expertise with laboratory instrumentation, published work, and academic qualifications.</p>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Write a brief summary here about your chemistry background, research interests (e.g., organic synthesis, material chemistry, biochemistry), and your professional goals.</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <h3>Analytical & Synthetic Techniques</h3>
+            <span class="badge">NMR Spectroscopy</span>
+            <span class="badge">HPLC / GC-MS</span>
+            <span class="badge">UV-Vis Spectroscopy</span>
+            <span class="badge">FTIR</span>
+            <span class="badge">Air-Sensitive Synthesis (Schlenk Line)</span>
+            <span class="badge">Recrystallization & Extraction</span>
+        </section>
+
+        <!-- Equipment Section -->
+        <section id="equipment">
+            <h2>Equipment Expertise</h2>
+            <ul>
+                <li><strong>Bruker Avance 400 MHz NMR:</strong> Routine 1H and 13C analysis, multidimensional NMR.</li>
+                <li><strong>Agilent 1260 Infinity HPLC:</strong> Method development, sample preparation, and column maintenance.</li>
+                <li><strong>Thermogravimetric Analysis (TGA):</strong> Thermal stability screening.</li>
+            </ul>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2>Research & Work Experience</h2>
+            <h3>Research Assistant — Laboratory Name / University</h3>
+            <p><em>Month Year – Present</em></p>
+            <ul>
+                <li>Synthesized and purified novel compounds achieving >95% purity.</li>
+                <li>Operated analytical instruments daily and maintained laboratory safety protocols.</li>
+            </ul>
+        </section>
+
+        <!-- CV Section -->
+        <section id="cv">
+            <h2>Curriculum Vitae</h2>
+            <p>Click below to view or download my complete CV and recent publications in PDF format:</p>
+            <a href="CV.pdf" class="btn" target="_blank">📄 View / Download CV (PDF)</a>
+        </section>
+
+    </div>
+
 </body>
 </html>
